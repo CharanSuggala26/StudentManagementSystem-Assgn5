@@ -1,0 +1,21 @@
+<section class="students-page">
+  <div class="header-row">
+    <h2>Students List</h2>
+    <button class="btn add-student" [routerLink]="['/add-student']">Add Student</button>
+  </div>
+
+  <div class="cards">
+    <article class="card" *ngFor="let student of studList">
+      <header class="card-header">
+        <h3 class="student-name">{{ student.name }}</h3>
+        <span class="student-class">{{ student.className }}</span>
+      </header>
+
+      <div class="card-body">
+        <p><strong>Gender:</strong> {{ student.gender }}</p>
+        <p><strong>Hobby:</strong> {{ student.hobby || 'No hobby' }}</p>
+        <p><strong>Favorite Subject:</strong> {{ student.favoriteSubject }}</p>
+      </div>
+    </article>
+  </div>
+</section>
